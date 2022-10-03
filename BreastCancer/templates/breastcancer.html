@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="solar.css">
+    
+    <title>Check for Cancer</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h1 class="text-primary" >Are you dying of Breast Cancer? </h1>
+        <br>
+        <h2>FIND OUT NOW !!!!</h2>
+        <p>With our machine learning algorithm with 98 percent accuracy. </p>
+    
+    </div>
+    <br>
+
+    
+   
+
+    <form method="GET" action="/">
+    
+        <div class="container">
+            <p>Answer the questions in a range from 1-10</p>
+        </div>
+        <div class="mb-3 container">
+            <label for="thickness_clump" class="form-label"><strong>Thickness in clump size</strong></label>
+            <input name="thickness_clump" type="text" class="form-control" id="thickness_clump" style="width: 30%" placeholder="1-10">
+        </div>
+
+        <div class="mb-3 container">
+            <label for="cell_size_uniformity" class="form-label"><strong>Cell size uniformity</strong></label>
+            <input name = "cell_size_uniformity" type="text" class="form-control" id="cell_size_uniformity" style="width: 30%" placeholder="1-10">
+        </div>
+
+        <div class="mb-3 container">
+            <label for="cell_shape" class="form-label"><strong>Rate Cell shape</strong></label>
+            <input name="cell_shape" type="text" class="form-control" id="cell_shape" style="width: 30%" placeholder="1-10">
+        </div>
+
+        <div class="mb-3 container">
+            <label for="rate_marginal_adhesion" class="form-label"><strong>Rate marginal adhesion </strong></label>
+            <input name = "rate_marginal_adhesion" type="text" class="form-control" id="rate_marginal_adhesion" style="width: 30%" placeholder="1-10">
+        </div>
+
+        <div class="mb-3 container">
+            <label for="epithelial_cell" for="exampleFormControlInput1" class="form-label"><strong>Single Epithelial cells</strong></label>
+            <input name="epithelial_cell" type="text" class="form-control" id="epithelial_cell" style="width: 30%" placeholder="1-10">
+        </div>
+
+        <div class="mb-3 container">
+            <label for="bare_nuclei" class="form-label"><strong>Bare nuclei count</strong></label>
+            <input name="bare_nuclei" type="text" class="form-control" id="bare_nuclei" style="width: 30%" placeholder="1-10">
+        </div>
+
+        <div class="mb-3 container">
+            <label for="bland_chromatin" class="form-label"><strong>Bland Chromatin </strong></label>
+            <input name="bland_chromatin" type="text" class="form-control" id="bland_chromatin" style="width: 30%" placeholder="1-10">
+        </div>
+
+        <div class="mb-3 container">
+            <label for="normal_nuclei" class="form-label"><strong>Normal nuclei size</strong></label>
+            <input name="normal_nuclei" type="text" class="form-control" id="normal_nuclei" style="width: 30%" placeholder="1-10">
+        </div>
+
+        <div class="mb-3 container">
+            <label for="mitosis" class="form-label"><strong>Rate mitosis</strong></label>
+            <input name="mitosis" type="text" class="form-control" id="mitosis" style="width: 30%" placeholder="1-10">
+        </div>
+
+        <div class="container">
+            <button id="button" type="submit" class="btn btn-danger" >Check</button>
+        </div>
+
+    </form>
+
+    <hr> 
+    
+    <div class="container">
+        <br>
+        <h3 class="text-muted">{{ prediction }}</h3>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <!-- <py-env>
+        - numpy 
+        - pandas 
+        - scikit-learn 
+        - pickle 
+        - paths: 
+            - breast_cancer_classifier.pickle
+            - CancerScript.py
+
+
+    </py-env>
+
+    <py-script>
+    import numpy
+    from CancerScript import CancerPredictionClassifier
+    import pickle 
+    
+
+    class BreastCancerData:
+        thickness_clump: int
+        cell_size_uniformity: int
+        cell_shape: int
+        rate_marginal_adhesion: int
+        epithelial_cell: int
+        bare_nuclei: int
+        bland_chromatin: int
+        normal_nuclei: int
+        mitosis: int
+
+        def __init__(self) -> None:
+            try:
+                self.thickness_clump = int(Element("thickness_clump").value)
+                self.size_uniformity = int(Element("cell_size_uniformity").value)
+                self.cell_shape = int(Element("cell_shape").value)
+                self.rate_marginal_adhesion = int(Element("rate_marginal_adhesion").value)
+                self.epithelial_cell = int(Element("epithelial_cell").value)
+                self.bare_nuclei = int(Element("bare_nuclei").value)
+                self.bland_chromatin = int(Element("bland_chromatin").value)
+                self.normal_nuclei = int(Element("normal_nuclei").value)
+                self.mitosis = int(Element("mitosis").value)
+            except Exception as e:
+                    print(e)
+
+            return
+
+    
+    def main(*args, **kwargs) -> None: 
+        
+
+        return 
+        
+        
+        
+    </py-script> -->
+
+    <script type="/text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script src="index.js"></script>
+    
+    
+</body>
+</html>
